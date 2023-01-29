@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import { db, auth } from "../firebase";
-import firebase from "firebase";
+// import firebase from "firebase";
+import firebase from "firebase/app";
+import "firebase/auth";
 
 function Sendmsg() {
   const [msg, setMsg] = useState("");
   async function sendmsg(e) {
     e.preventDefault();
     const { uid, photoURL } = auth.currentUser;
-    db.collection("messages").add({
+    db.collection("entries").add({
       text: msg,
       photoURL,
       uid,

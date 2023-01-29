@@ -7,7 +7,7 @@ import Sendmsg from "./sendmsg";
 function Chat() {
   const [messages, setMessages] = useState([]);
   useEffect(() => {
-    db.collection("messages")
+    db.collection("entries")
       .orderBy("createdAt")
       .limit(50)
       .onSnapshot((snapshot) => {
@@ -24,15 +24,15 @@ function Chat() {
     <div id="about">
       <div
         id="chatmsgs"
-        style={
-          {
-            // backgroundImage: "url(" + ChatBackground + ")",
-            // backgroundColor: "white",
-          }
-        }
+        style={{
+          // backgroundImage: "url(" + ChatBackground + ")",
+          // backgroundColor: "white",
+          width: "100vw",
+          height: "-webkit-height-available",
+        }}
       >
         {messages.map(({ id, text, photoURL, uid }) => (
-          <div>
+          <div style={{ background: "none" }}>
             <div
               key={id}
               className={`msg ${

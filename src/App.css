@@ -98,17 +98,24 @@ body {
   position: relative;
 }
 #about {
-  height: 89vh;
   overflow-y: scroll;
+  height: 94vh;
+  background-image: url("./components/chatBackground.jpg");
 }
 #chatmsgs {
-  height: 87vh;
+  /* height: 87vh; */
+  background: none !important;
+  min-height: 90vh;
+  padding: 0 0 40px 0;
   overflow-y: scroll;
+  backdrop-filter: blur(2px) brightness(0.6);
+  margin: auto;
+  max-width: 1200px;
 }
 
 @media screen and (min-width: 501px) {
   #about {
-    height: 93vh;
+    height: 94vh;
   }
   #home {
     height: 93vh;
@@ -124,6 +131,7 @@ body {
   text-align: initial;
   max-width: 80vw;
   align-items: center;
+  background: none;
 }
 .sent {
   background-color: #395dff;
@@ -177,7 +185,7 @@ body {
   text-align: center;
 } */
 #form {
-  background: rgb(69 69 69);
+  background: rgb(23, 23, 23);
   padding: 0.25rem;
   position: fixed;
   bottom: 0px;
@@ -186,6 +194,8 @@ body {
   display: flex;
   height: 3rem;
   box-sizing: border-box;
+  max-width: 1200px;
+  margin: auto;
   /* backdrop-filter: blur(10px); */
 }
 
@@ -235,4 +245,8 @@ body {
   background-color: rgb(59, 59, 59);
   /* filter: brightness(0.5); */
   /* background-blend-mode: darken; */
+}
+
+::-webkit-scrollbar {
+  display: none;
 }

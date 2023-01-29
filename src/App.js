@@ -18,7 +18,7 @@ function App() {
         <img id="introimg" src={logo} alt="sC" />
 
         <h2>Chathook </h2>
-        <p>Trab your conversation...</p>
+        <p>Grab your conversation...</p>
       </div>
       <Navbar />
       {user ? <Chat /> : <Home />}

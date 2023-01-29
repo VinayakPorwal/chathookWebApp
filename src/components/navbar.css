@@ -26,7 +26,7 @@ body {
 
 #navbar {
   width: 100vw;
-
+  height: 6vh;
   color: white;
   background-color: #36aaff;
   /* background: linear-gradient(45deg, #86FAF2, #30E7ED, #00A6D7); */
